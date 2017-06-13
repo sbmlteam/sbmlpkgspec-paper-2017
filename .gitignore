@@ -29,6 +29,4 @@ auto
 % Things specific to this directory.
 # .............................................................................
 
-main.pdf
-main.info
-all-bib.pdf
+sbmlpkgspec-paper.pdf
