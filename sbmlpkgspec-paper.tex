@@ -232,12 +232,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%% start of article main body
 % <put your article body there>
 
-\section*{Background}
+\section*{Introduction}
 
 SBML (the Systems Biology Markup Language) is an XML-based format that has become a community standard for the storage, communication and interchange of models in systems biology~\cite{hucka2003the, waltemath2014meeting}.  The format has evolved in a community-driven fashion, with contributions from dozens of people worldwide over more than a decade and a half.  The latest generation of SBML is SBML Level~3, which is structured as a self-sufficient core and optional \emph{SBML Level~3 packages} that can be used to extend the core's syntax and semantics~\cite{hucka2015the}.  The definition of each SBML Level~3 package is written in a formal specification document that is made freely available to everyone~\cite{schreiber2015specifications, schreiber2016specifications}.  SBML packages are introduced and ratified according to an explicit SBML Development Process (\url{http://sbml.org/Documents/SBML_Development_Process}); this process also defines a template for the content that each specification document should contain.
 
 
-\section*{SBMLPkgSpec}
+\section*{Main Text}
 
 \sbmlpkg{} is a LaTeX document class~\cite{lamport1994} intended to provide a common framework for writing SBML package specifications, as well as provide a uniform look and feel for the family of SBML specifications.  \sbmlpkg{} builds on a number of other commonly-available LaTeX document classes, and also defines a number of new commands, so that users of \sbmlpkg{} can focus on the essential aspects of writing clear specification documents for SBML.  Among the features provided by \sbmlpkg{} are the following:
 
@@ -281,7 +281,6 @@ The use of \sbmlpkg{} should require only a recent and relatively complete insta
 Once \sbmlpkg{} is installed, users can write specification documents with the standard \texttt{documentclass} command in LaTeX to declare the use of the class \texttt{sbmlpkgspec}, and write their document using whatever editing environment they prefer, including online shared LaTeX editing environments.
 
 
-
 \subsection*{Documentation}
 
 \sbmlpkg{} comes with a complete user's guide.  Users of \sbmlpkg{} are strongly urged to read the guide; it explains everything needed to know to use the document class, and includes tips for how to make the most of it.  
@@ -307,9 +306,17 @@ The author declares that he has no competing interests.
 % \section*{Author's contributions}
 %     Text for this section \ldots
 
+\section*{Availability of data and materials}
+
+\sbmlpkg{} is available in two different forms: as a compressed archive of source code and documentation files, and as a public repository that can be cloned using ordinary \texttt{git} commands.  Both forms are available from the project repository hosted on GitHub at \url{\githuburl}.
+
+\section*{Funding}
+
+\sbmlpkg{} has been developed thanks to funding from the National Institute of General Medical Sciences under grant R01~GM070923 (Principal Investigator: Michael Hucka).
+
 \section*{Acknowledgements}
 
-I thank Maciej Swat (from the EMBL European Bioinformatics Institute) for problem reports about earlier versions of \sbmlpkg.  I also thank all users for their informal feedback and suggestions.  \sbmlpkg{} has been developed thanks to funding from the National Institute of General Medical Sciences under grant R01~GM070923 (Principal Investigator: Michael Hucka).
+I thank Maciej Swat (from the EMBL European Bioinformatics Institute) for problem reports about earlier versions of \sbmlpkg.  I also thank all users for their informal feedback and suggestions.  
 
 
 
@@ -356,11 +363,9 @@ I thank Maciej Swat (from the EMBL European Bioinformatics Institute) for proble
 %%
 %% Do not use \listoffigures as most will included as separate files
 
-\section*{Figures}
-
 
 \begin{figure}[h!]
-\fbox{\includegraphics[width=0.9\linewidth]{graphics/sbmlpkgspec-sample-1}}
+%\fbox{\includegraphics[width=0.9\linewidth]{graphics/sbmlpkgspec-sample-1}}
 \caption{A sample page from the \sbmlpkg{} user's guide, illustrating the look and feel of the document and some of its features.}
 \end{figure}
 
