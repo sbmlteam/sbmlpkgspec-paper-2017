@@ -1,0 +1,31 @@
+\documentclass{bmcart}
+
+%%% Load packages
+\usepackage{amsthm,amsmath}
+\RequirePackage[square,numbers,sort&compress]{natbib}
+%\RequirePackage[authoryear]{natbib}% uncomment this for author-year bibliography
+\usepackage[pdftex]{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc} %unicode support
+%\usepackage[applemac]{inputenc} %applemac support if unicode package fails
+%\usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+\usepackage{url}
+\usepackage{lmodern}
+
+\startlocaldefs
+\newcommand{\sbmlpkg}{SBMLPkgSpec}
+\newcommand{\sbmlpkgfile}{\texttt{sbmlpkgspec.cls}}
+\newcommand{\githuburl}{https://github.com/sbmlteam/sbmlpkgspec}
+\endlocaldefs
+
+
+%%% Begin ...
+\begin{document}
+
+
+\begin{figure}[h!]
+\fbox{\includegraphics[width=0.9\linewidth]{graphics/sbmlpkgspec-sample-1}}
+\caption{A sample page from the \sbmlpkg{} user's guide, illustrating the look and feel of the document and some of its features.}
+\end{figure}
+
+\end{document}
