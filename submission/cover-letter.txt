@@ -1,8 +1,0 @@
-Dear Editors,
-
-I would like to submit the accompanying paper as a BMC Research Note in the area of "software".  It describes a LaTeX style and template for writing specification documents for a certain popular standardization effort in systems biology.  While the work is not software in the sense of being an executable program, it is software in a broader sense.
-
-I hope the paper is suitable, and I look forward to finding out more about the appropriateness of this work for publication, and any additional steps I should take with respect to the submission/editorial/revision process.
-
-Best regards,
-Mike Hucka
