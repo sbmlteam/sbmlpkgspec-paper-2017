@@ -173,9 +173,6 @@
 \parttitle{Objective} SBML (the Systems Biology Markup Language) is a popular open format for storing and exchanging computational models in biology.  The definition of SBML is captured in formal specification documents.  \sbmlpkg{} is a LaTeX document style intended to fill the need for a standard format for writing such specification documents.
 
 \parttitle{Results} Specification documents for SBML Level~3 extensions (known as \emph{packages} in SBML) are made more uniform with the use of a standard template.  \sbmlpkg{} is a LaTeX class that provides a common document format for SBML Level~3 package specifications, to simplify the work of document authors while improving the overall quality of the family of SBML specifications.
-
-\parttitle{Availability} The LaTeX source code and documentation for  \sbmlpkg{} are freely available under the terms of the LGPL 2.1 license from \url{\githuburl}.
-
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -234,7 +231,7 @@
 
 \section*{Introduction}
 
-SBML (the Systems Biology Markup Language) is an XML-based format that has become a community standard for the storage, communication and interchange of models in systems biology~\cite{hucka2003the, waltemath2014meeting}.  The format has evolved in a community-driven fashion, with contributions from dozens of people worldwide over more than a decade and a half.  The latest generation of SBML is SBML Level~3, which is structured as a self-sufficient core and optional \emph{SBML Level~3 packages} that can be used to extend the core's syntax and semantics~\cite{hucka2015the}.  The definition of each SBML Level~3 package is written in a formal specification document that is made freely available to everyone~\cite{schreiber2015specifications, schreiber2016specifications}.  SBML packages are introduced and ratified according to an explicit SBML Development Process (\url{http://sbml.org/Documents/SBML_Development_Process}); this process also defines a template for the content that each specification document should contain.
+SBML (the Systems Biology Markup Language) is an XML-based (Extensible Markup Language) format that has become a community standard for the storage, communication and interchange of models in systems biology~\cite{hucka2003the, waltemath2014meeting}.  The format has evolved in a community-driven fashion, with contributions from dozens of people worldwide over more than a decade and a half.  The latest generation of SBML is SBML Level~3, which is structured as a self-sufficient core and optional \emph{SBML Level~3 packages} that can be used to extend the core's syntax and semantics~\cite{hucka2015the}.  The definition of each SBML Level~3 package is written in a formal specification document that is made freely available to everyone~\cite{schreiber2015specifications, schreiber2016specifications}.  SBML packages are introduced and ratified according to an explicit SBML Development Process (\url{http://sbml.org/Documents/SBML_Development_Process}); this process also defines a template for the content that each specification document should contain.
 
 
 \section*{Main Text}
@@ -286,37 +283,51 @@ Once \sbmlpkg{} is installed, users can write specification documents with the s
 \sbmlpkg{} comes with a complete user's guide.  Users of \sbmlpkg{} are strongly urged to read the guide; it explains everything needed to know to use the document class, and includes tips for how to make the most of it.  
 
 
-\section*{Discussion}
+\subsection*{Discussion}
 
 LaTeX~\cite{lamport1994} is a popular document production system in science.  In systems biology and the SBML-using community, it is so popular that some software tools have been designed to produce LaTeX output directly~\cite{drager2009sbml2latex, shen2010sbml2tikz}.  LaTeX provides tremendous power to authors, but it is also relatively difficult to use.  Defining new styles is specially difficult, and requires arcane knowledge and significant patience.  By simplifying the requirements for producing templated documents and providing a ready-to-use LaTeX style, \sbmlpkg{} can make it easier for SBML specification authors to use LaTeX to produce documents with a uniform format.  This in turn permits authors of SBML specifications to concentrate on the technical aspects of the work.
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                                          %%
-%% Backmatter begins here                   %%
-%%                                          %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Limitations}
 
-\begin{backmatter}
+\sbmlpkg{} imports many other LaTeX classes when it is used with LaTeX. These additional classes must be installed on the user's computer for \sbmlpkg{} to work.  The classes are present in many full-featured TeX distributions such as the TeX Live 2011 and 2016 distributions, but if they are not, the user will need to find and install them separately. The relevant software packages for Ubuntu Linux are noted above.
 
-\section*{Competing interests}
+
+\section*{List of abbreviations}
+
+\textbf{SBML}: Systems Biology Markup Language.\\
+\textbf{XML}: Extensible Markup Language.
+
+
+\section*{Declarations}
+
+\subsection*{Ethics approval and consent to participate}
+
+Not applicable.
+
+\subsection*{Consent for publication}
+
+Not applicable.
+
+\subsection*{Availability of data and material}
+
+\sbmlpkg{} is available in two different forms: as a compressed archive of LaTeX source code and documentation files, and as a public repository that can be cloned using ordinary \texttt{git} commands. Both forms are freely available under the terms of the LGPL 2.1 license from the project repository hosted on GitHub at \url{\githuburl}.
+
+\subsection*{Competing interests}
 
 The author declares that he has no competing interests.
 
-% \section*{Author's contributions}
-%     Text for this section \ldots
-
-\section*{Availability of data and materials}
-
-\sbmlpkg{} is available in two different forms: as a compressed archive of source code and documentation files, and as a public repository that can be cloned using ordinary \texttt{git} commands.  Both forms are available from the project repository hosted on GitHub at \url{\githuburl}.
-
-\section*{Funding}
+\subsection*{Funding}
 
 \sbmlpkg{} has been developed thanks to funding from the National Institute of General Medical Sciences under grant R01~GM070923 (Principal Investigator: Michael Hucka).
 
-\section*{Acknowledgements}
+\subsection*{Authors' contributions}
 
-I thank Maciej Swat (from the EMBL European Bioinformatics Institute) for problem reports about earlier versions of \sbmlpkg.  I also thank all users for their informal feedback and suggestions.  
+MH developed the software and documentation, and wrote the manuscript.
+
+\subsection*{Acknowledgements}
+
+I thank Maciej Swat (from the EMBL European Bioinformatics Institute) for reporting problems with earlier versions of \sbmlpkg.  I also thank all users for their informal feedback and suggestions.  
 
 
 
@@ -398,5 +409,5 @@ I thank Maciej Swat (from the EMBL European Bioinformatics Institute) for proble
 
 
 
-\end{backmatter}
+
 \end{document}
