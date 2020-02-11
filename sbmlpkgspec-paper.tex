@@ -172,7 +172,7 @@
 \begin{abstract}
 \parttitle{Objective} SBML (the Systems Biology Markup Language) is a popular open format for storing and exchanging computational models in biology.  The definition of SBML is captured in formal specification documents.  \sbmlpkg{} is a LaTeX document style intended to fill the need for a standard format for writing such specification documents.
 
-\parttitle{Results} Specification documents for SBML Level~3 extensions (known as \emph{packages} in SBML) are made more uniform with the use of a standard template.  \sbmlpkg{} is a LaTeX class that provides a common document format for SBML Level~3 package specifications, to simplify the work of document authors while improving the overall quality of the family of SBML specifications.
+\parttitle{Results} Specification documents for SBML Level~3 extensions (known as \emph{packages} in SBML) are made more uniform with the use of a standard template.  \sbmlpkg{} is a LaTeX class that provides a document framework for SBML Level~3 package specifications, to simplify the work of document authors while improving the overall quality of the family of SBML specifications.
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -231,7 +231,21 @@
 
 \section*{Introduction}
 
-SBML (the Systems Biology Markup Language) is an XML-based (Extensible Markup Language) format that has become a community standard for the storage, communication and interchange of models in systems biology~\cite{hucka2003the, waltemath2014meeting}.  The format has evolved in a community-driven fashion, with contributions from dozens of people worldwide over more than a decade and a half.  The latest generation of SBML is SBML Level~3, which is structured as a self-sufficient core and optional \emph{SBML Level~3 packages} that can be used to extend the core's syntax and semantics~\cite{hucka2015the}.  The definition of each SBML Level~3 package is written in a formal specification document that is made freely available to everyone~\cite{schreiber2015specifications, schreiber2016specifications}.  SBML packages are introduced and ratified according to an explicit SBML Development Process (\url{http://sbml.org/Documents/SBML_Development_Process}); this process also defines a template for the content that each specification document should contain.
+SBML (the Systems Biology Markup Language) is an XML-based (Extensible Markup Language) format that has become a community standard for the storage, communication and interchange of models in systems biology~\cite{hucka2003the, waltemath2014meeting}.  The format has evolved in a community-driven fashion, with contributions from dozens of people worldwide over more than a decade and a half.  The latest generation of SBML is SBML Level~3, which is structured as a self-sufficient core and optional \emph{SBML Level~3 packages} that can be used to extend the core's syntax and semantics~\cite{hucka2015the}.  The definition of each SBML Level~3 package is written in a formal specification document that is made freely available~\cite{schreiber2015specifications, schreiber2016specifications}.
+
+SBML packages are produced and ratified according to an explicit SBML Development Process (\url{http://sbml.org/Documents/SBML_Development_Process}).  This process also defines the content that each specification document should contain.  However, it is challenging for prospective specification creators to generate a clear and complete specification document from scratch.  The availability of an existing framework provides a starting point and helps authors in several respects:
+
+\begin{itemize}
+
+\item It helps ensure that required information is not forgotten from the document
+
+\item It saves writing time by providing well-tested commands for formatting elements that are commonly used in SBML specification documents
+
+\item It provides a cohesive look and feel for all SBML specifications
+
+\end{itemize}
+
+For these reasons, \sbmlpkg{} was developed to provide a document framework for SBML package specification documents.
 
 
 \section*{Main Text}
@@ -240,13 +254,13 @@ SBML (the Systems Biology Markup Language) is an XML-based (Extensible Markup La
 
 \begin{itemize}
 
-\item Predefined commands for defining the SBML package version, release date, home web page, and author list, to be printed on the document's front page.
+\item Commands for defining the SBML package version, release date, home web page, and author list, to be printed on the document's front page.
 
 \item Commands for defining SBML \emph{validation rules}.  A convention developed for the SBML specification documents is to define validation and consistency rules that must or should be satisfied by SBML files that conform to the specification; SBML package specifications likewise define their own validation and consistency rules, and the commands in \sbmlpkg{} provide the means for easily defining and formatting them.
 
 \item Commands for formatting the names of common SBML object classes and XML primitive data types, as well as for creating new package-specific definitions.  The commands for SBML object names automatically insert hyperlinks to the sections where they are defined from wherever they are  referenced within a document.
 
-\item Customized commands for cross-referencing sections, tables and figures; these are designed to produce \emph{both} item number and page references that are automatically hyperlinked to the appropriate locations in the finished document. They also obey some common typographical conventions (such as the use of LaTeX ties in the appropriate locations) to save authors the trouble of remembering them.
+\item Customized commands for cross-referencing sections, tables and figures; these are designed to produce both item number and page references that are automatically hyperlinked to the appropriate locations in the finished document. They also obey some common typographical conventions (such as the use of LaTeX ties in the appropriate locations) to save authors the trouble of remembering to use them.
 
 \item Commands for formatting SBML XML examples in a stylized fashion.
 
@@ -265,11 +279,11 @@ To illustrate some of the features of \sbmlpkg{}, Figure~1 shows an image of a p
 
 \subsection*{Installation and configuration}
 
-The use of \sbmlpkg{} should require only a recent and relatively complete installation of LaTeX2e.  It was developed and tested with the TeX Live 2011 and 2016 distributions on Mac~OS~X 10.6--10.11 system, and has been reported to work with TeX Live on Windows and Ubuntu Linux.  (For Ubuntu, make sure to install the following packages: ``\texttt{texlive}'', ``\texttt{texlive-latex-extra}'', ``\texttt{texlive-humantities}'', and ``\texttt{texlive-fonts-extra}''.)  To use \sbmlpkg, you will need to inform your copy of LaTeX where to find the file \sbmlpkgfile{} and its accompanying subdirectory ``\texttt{logos}''.  This can be done in a variety of ways.  Here are two common ones:
+The use of \sbmlpkg{} should require only a recent and relatively complete installation of LaTeX2e.  It was developed and tested with the TeX Live 2011 and 2016 distributions on Mac~OS~X 10.6--10.11 system, and has been reported to work with TeX Live on Windows and Ubuntu Linux.  (For Ubuntu, make sure to install the following packages: ``\texttt{texlive}'', ``\texttt{texlive-latex-extra}'', ``\texttt{texlive-humantities}'', and ``\texttt{texlive-fonts-extra}''.)  To use \sbmlpkg, you will need to inform your copy of LaTeX where to find the file \sbmlpkgfile{} and its accompanying subdirectory ``\texttt{logos}''.  This can be done in a variety of ways.  Here are two common approaches:
 
 \begin{itemize}
 
-\item \emph{Per-document installation}.  This is probably the simplest approach, although it results in multiple copies of the files.  Download the \sbmlpkg{} release from the GitHub repository (\url{\githuburl}), copy the contents (specifically, \sbmlpkgfile{} and the folder named ``\texttt{logos}'') to the folder where you keep the other files for the SBML Level~3 package specification you are authoring, and you are done.  The next time you run LaTeX in that folder, it will find the \texttt{.cls} file in the current directory and be on its merry way.
+\item \emph{Per-document installation}.  This is probably the simplest approach, although it results in multiple copies of the files.  Download the \sbmlpkg{} release from the GitHub repository (\url{\githuburl}), copy the contents (specifically, \sbmlpkgfile{} and the folder named ``\texttt{logos}'') to the folder where you keep the other files for the SBML Level~3 package specification you are authoring, and you are done.  The next time you run LaTeX in that folder, it will find the \texttt{.cls} file in the current directory.
 
 \item \emph{``Central'' installation}.  In this approach, you install \sbmlpkgfile{} in a folder where you keep other LaTeX class files, and configure your copy of LaTeX to find things there.  Configuring a TeX system in this way on Unix-type systems (Linux, etc.)\ usually requires setting the environment variable \texttt{TEXINPUTS} and possibly others.  Please consult the documentation for your TeX installation to determine how to do this.
 
@@ -327,7 +341,7 @@ MH developed the software and documentation, and wrote the manuscript.
 
 \subsection*{Acknowledgements}
 
-I thank Maciej Swat (from the EMBL European Bioinformatics Institute) for reporting problems with earlier versions of \sbmlpkg.  I also thank all users for their informal feedback and suggestions.  
+I thank Maciej Swat (from the EMBL European Bioinformatics Institute) for reporting problems with earlier versions of \sbmlpkg.  I also thank all users for their informal feedback and suggestions.  Finally, I thank the anonymous manuscript reviewer for their genuinely useful feedback about how to improve this paper. 
 
 
 
