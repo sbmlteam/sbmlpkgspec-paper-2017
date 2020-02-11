@@ -1,0 +1,18 @@
+Dear Editors,
+
+I thank the Reviewer for their useful feedback about the manuscript.  Please find enclosed a revised manuscript that attempts to address the three substantive issues raised during review:
+
+  1. Regarding the suggestion "additional explanation of the issues that this software package resolves would be useful to the reader", the revised manuscript has a new paragraph in the introduction where I attempt to explain the problems that the software attempts to address.
+
+  2. Regarding the suggestion "comparison of the SBMLPkgSpec output to the current output would be helpful": assuming that I understand the comment correctly, there is unfortunately no way to achieve this.  There are no competing formats for SBML specifications, and all modern SBML package specifications have been written using SBMLPkgSPec.  Thus, I regret I do not know how to address this suggestion.
+
+  3. The Figure file has now been uploaded as submission type "Figure" instead of "Manuscript".
+
+In addition, I took this opportunity to make very, very small edits elsewhere for clarity and conciseness. 
+
+Changes are marked with change bars in a second file included with this submission, named "sbmlpkgspec-paper-changebar-differences.tex". This file is the output of running the command latexdiff on the original submission and the revised submission of the file sbmlpkgspec-paper.tex. 
+
+I hope the revisions are suitable, and I look forward to finding out more about the appropriateness of this work for publication.
+
+Best regards,
+Mike Hucka
