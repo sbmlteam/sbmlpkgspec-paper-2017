@@ -49,7 +49,9 @@ pdflatex sbmlpkgspec-paper
 License
 -------
 
-Software produced by the SBML project is licensed under the [LGPL version 2.1 license](https://choosealicense.com/licenses/lgpl-2.1/).  Please see the [LICENSE](LICENSE) file for more information.
+<a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/"><img align="right" alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nd/4.0/88x31.png" /></a>
+
+The contents of this repository are licensed under a [Creative Commons Attribution-NoDerivatives 4.0 International license (CC BY-ND 4.0)](https://creativecommons.org/licenses/by-nd/4.0/).  A copy of the license is available in the file named [LICENSE](LICENSE).
 
 
 Authors and history
